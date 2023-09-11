@@ -39,7 +39,7 @@ jobs:
         python-version: ['3.8', '3.11']
     name: tests-${{ matrix.os }}-${{ matrix.python-version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup CI
@@ -62,7 +62,7 @@ jobs:
       - tests
     if: github.event_name == 'pull_request'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup CI
